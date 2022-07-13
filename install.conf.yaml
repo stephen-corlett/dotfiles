@@ -6,7 +6,7 @@
 
 - link:
     ~/.zshrc:
-      path: .zshrc
+      path: ./zsh/base.zsh
       force: true
     ~/.gitconfig:
       path: git.conf
@@ -17,6 +17,11 @@
     command: git submodule update --init --recursive
   - description: Installing oh-my-zsh
     command: $([[ -d "$HOME/.oh-my-zsh" ]] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc)
+  - description: Installing Powerlevel10k
+    command: repo=https://github.com/romkatv/powerlevel10k &&
+      target=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k &&
+      git clone --depth 1 $repo $target ||
+      git -C $target pull
   - description: Installing zsh-autosuggestions
     command: repo=https://github.com/zsh-users/zsh-autosuggestions &&
       target=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
