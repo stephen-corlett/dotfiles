@@ -115,7 +115,7 @@ alias zsh-config="code ~/.zshrc"
 alias source-zsh="source ~/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source .p10k.zsh
 
 if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/nvm.zsh"
