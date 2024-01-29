@@ -121,3 +121,6 @@ if [[ $(uname) = Darwin ]]; then
   include "$DOTFILES/zsh/nvm.zsh"
   include "$DOTFILES/zsh/thinkific.zsh"
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f "$DOTFILES/zsh/.p10k.zsh" ]] || source "$DOTFILES/zsh/.p10k.zsh"

@@ -1,0 +1,15 @@
+# Cask Packages
+cask "visual-studio-code"
+cask "docker"
+cask "dbeaver-community"
+cask "iterm2"
+
+# Brew Packages
+brew "ca-certificates" # for netskope in devcontainers
+brew "kubernetes-cli"
+brew "awscli"
+brew "git"
+brew "gh" # Github CLI
+brew "commitizen"
+brew "nvm"
+

@@ -1,4 +1,4 @@
-### Setting up your Mac
+### Setting up dotfiles
 
 1. Clone this repo to `~/dotfiles` with:
 
@@ -9,16 +9,16 @@
 2. Run the installation with:
 
     ```zsh
-    ~/dotfiles/install
+    ~/dotfiles/install.sh
     ```
 
-3. Install Homebrew & Mac apps specified in the [`Brewfile`](./Brewfile) with:
+### Setting up on Mac
 
-    ```zsh
-    ~/dotfiles/mac-setup.sh
-    ```
+If you are using Mac, run the mac setup to install finish setup for Mac specific dependencies
 
-4. Restart your computer to finalize the process
+```zsh
+~/dotfiles/mac-setup/install.sh
+```
 
 ### VSCode Dev-Container Setup
 
