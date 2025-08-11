@@ -1,3 +1,13 @@
+if [[ $(uname) = Darwin ]]; then
+  include "$DOTFILES/zsh/nvm.zsh"
+  include "$DOTFILES/zsh/thinkific.zsh"
+fi
+
+# Skip loading customizations when using cursor agent
+if [[ "$PAGER" == "head -n 10000 | cat" || "$COMPOSER_NO_INTERACTION" == "1" ]]; then
+  return
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -116,11 +126,6 @@ alias source-zsh="source ~/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source "$DOTFILES/zsh/.p10k.zsh"
-
-if [[ $(uname) = Darwin ]]; then
-  include "$DOTFILES/zsh/nvm.zsh"
-  include "$DOTFILES/zsh/thinkific.zsh"
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 [[ ! -f "$DOTFILES/zsh/.p10k.zsh" ]] || source "$DOTFILES/zsh/.p10k.zsh"
